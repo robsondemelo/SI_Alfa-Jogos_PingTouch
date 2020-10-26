@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>New project</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>3vqcx8a6zawec</unique-id>
+    <saved-with-version>27700</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
+        <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>700</width>
+        <height>1200</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Construct 2 splash</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="BackGround" sid="812165279649291">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="112650993576572" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Parede" sid="967363352810757">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="785791915247975">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="522479026786745" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="blocos" sid="960206108547819">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="536469173722094">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="5" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="251356175733776" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Plataforma" sid="491482733786381">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="753051837741418">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="BoundToLayout" sid="520568817564372">
+                    <behavior id="bound" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="888568694312387" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Bola" sid="281942529092499">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Inicial" sid="866147856347762" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Bullet" sid="153511987536571">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="410726802707010" speed="5">
+                    <frame duration="1" hotspotX="0.518987" hotspotY="0.602564">
+                        <collision-poly>
+                            <point x="0.240506" y="0.24359" />
+                            <point x="0.493671" y="0.141026" />
+                            <point x="0.759494" y="0.24359" />
+                            <point x="0.860759" y="0.5" />
+                            <point x="0.759494" y="0.75641" />
+                            <point x="0.493671" y="0.858974" />
+                            <point x="0.240506" y="0.75641" />
+                            <point x="0.139241" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Particles" sid="599545901030120">
+            <plugin id="Particles" />
+            <texture />
+        </object-type>
+        <object-type name="Touch" sid="858816328379464">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="ScorePainel" sid="436513648101320">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Text" sid="874514190621764">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="RA" sid="548297332252527">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Aluno" sid="180944006162358">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Fase1" sid="645491337328036">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Fase2" sid="215472151498507">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Fase3" sid="677908095990965">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="barrafxlvl2" sid="207556808821307">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="916939125293001">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="575902526560009" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="barraRTlvl2" sid="292825501332906">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Rotate" sid="643254213353694">
+                    <behavior id="Rotate" />
+                </behavior-type>
+                <behavior-type name="Solid" sid="316777348511319">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="194574067125189" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="redball" sid="927716742214636">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="809387726030719">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="644986853666275" speed="5">
+                    <frame duration="1" hotspotX="0.525641" hotspotY="0.512821">
+                        <collision-poly>
+                            <point x="0.24359" y="0.24359" />
+                            <point x="0.5" y="0.141026" />
+                            <point x="0.75641" y="0.24359" />
+                            <point x="0.858974" y="0.5" />
+                            <point x="0.75641" y="0.75641" />
+                            <point x="0.5" y="0.858974" />
+                            <point x="0.24359" y="0.75641" />
+                            <point x="0.141026" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>SplashScreen.xml</layout>
+        <layout>Level1.xml</layout>
+        <layout>Level2.xml</layout>
+        <layout>Level3.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>engine.xml</event-sheet>
+        <event-sheet>global.xml</event-sheet>
+        <event-sheet>SplashScreen.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Touch" uid="30">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

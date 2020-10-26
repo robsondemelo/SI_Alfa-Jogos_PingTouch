@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>engine</name>
+    <events>
+        <event-block sid="957235960253255">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="260790241142847" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="573343105835454" type="System">
+                    <param id="0" name="Variable">BlocosStart</param>
+                    <param id="1" name="Value">blocos.Count</param>
+                </action>
+                <action id="-9" name="Set value" sid="500140583737082" type="System">
+                    <param id="0" name="Variable">BlocosEnd</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="733124980876423">
+            <conditions>
+                <condition id="2" name="Is in touch" sid="439429074346374" type="Touch" />
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="691804137219023" type="Plataforma">
+                    <param id="0" name="X">Touch.X</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="343838881483159">
+            <conditions>
+                <condition id="1" name="On any touch end" sid="357693255957000" type="Touch" />
+                <condition id="-7" name="Compare instance variable" sid="766143829545432" type="Bola">
+                    <param id="0" name="Instance variable">Inicial</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="222511830271462" type="Bola">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-8" name="Set angle" sid="480086543495866" type="Bola">
+                    <param id="0" name="Angle">choose(230,270,320)</param>
+                </action>
+                <action id="-10" name="Set value" sid="978810244638354" type="Bola">
+                    <param id="0" name="Instance variable">Inicial</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="393840303267180">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="817927752482109" type="Bola">
+                    <param id="0" name="Object">blocos</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="321033761179750" type="blocos">
+                    <param id="0" name="Frame number">blocos.AnimationFrame + 1</param>
+                </action>
+                <action id="-10" name="Add to" sid="852339675175759" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Value">5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="280461281377527">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="782010003212988" type="redball">
+                    <param id="0" name="Object">blocos</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="220814618819366" type="blocos">
+                    <param id="0" name="Frame number">blocos.AnimationFrame + 1</param>
+                </action>
+                <action id="-10" name="Add to" sid="694104341662100" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Value">5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="606591819760569">
+            <conditions>
+                <condition id="3" name="Compare frame" sid="956534787226405" type="blocos">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Number">4</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="802005435714721" type="blocos" />
+                <action id="0" name="Spawn another object" sid="884554995981524" type="blocos">
+                    <param id="0" name="Object">Particles</param>
+                    <param id="1" name="Layer">&quot;main&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-10" name="Add to" sid="165379910126160" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Value">10</param>
+                </action>
+                <action id="-10" name="Add to" sid="121181509982933" type="System">
+                    <param id="0" name="Variable">BlocosEnd</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-10" name="Add to" sid="834823325481673" type="System">
+                    <param id="0" name="Variable">BoxDestroy3</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="830322322096425">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="508966239357745" type="System">
+                            <param id="0" name="Variable">BoxDestroy3</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="391054252281481" type="blocos">
+                            <param id="0" name="Object">redball</param>
+                            <param id="1" name="Layer">&quot;Main&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="647656586526347" type="System">
+                            <param id="0" name="Variable">BoxDestroy3</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="817413931683543" type="redball">
+                            <param id="0" name="Angle">choose(230,270,320)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="153926421824337">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="121616775254524" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="695805309300764" type="ScorePainel">
+                    <param id="0" name="Text">&quot;Pontos: &quot; &amp; Score</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="351329213946288">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="258373116964763" type="System">
+                    <param id="0" name="First value">BlocosStart</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">BlocosEnd</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-43" name="Go to next/previous layout" sid="671635495383268" type="System">
+                    <param id="0" name="Which">0</param>
+                </action>
+                <action id="-25" name="Go to layout (by name)" sid="361834106157109" type="System">
+                    <param id="0" name="Layout">&quot;Level1&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="165129207331665">
+            <conditions>
+                <condition id="-4" name="Is outside layout" sid="201788223133551" type="Bola" />
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="533619914283898" type="System">
+                    <param id="0" name="Layout">&quot;Level1&quot;</param>
+                </action>
+                <action id="-21" name="Reset global variables" sid="478276883880049" type="System" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

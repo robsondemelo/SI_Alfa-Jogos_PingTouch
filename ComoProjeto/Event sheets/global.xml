@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>global</name>
+    <events>
+        <variable constant="0" name="BoxDestroy3" sid="392703683925575" static="0" type="number">0</variable>
+        <variable constant="0" name="Score" sid="600333352547470" static="0" type="number">0</variable>
+        <variable constant="0" name="BlocosEnd" sid="161083170904250" static="0" type="number">0</variable>
+        <variable constant="0" name="BlocosStart" sid="326433215722570" static="0" type="number">0</variable>
+    </events>
+</c2eventsheet>
